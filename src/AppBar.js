@@ -8,7 +8,7 @@ function Appbar() {
   <Toolbar>
     <IconButton edge="start" color="inherit" aria-label="menu">
     </IconButton>
-    <Typography variant="h6">
+    <Typography variant="h3" className="TitleText">
       Code Quiz App
     </Typography>
   </Toolbar>

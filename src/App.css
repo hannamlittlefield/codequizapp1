@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.TitleText{
+  font-family: 'Sansita Swashed', cursive !important;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -19,11 +23,24 @@
 }
 
 .Appbar{
-  background-color: #1D3461;
+  background-color: #1D3461 !important;
 }
 
 .container{
   background-color: #829CBC;
+}
+
+.cardbutton{
+  background-color: #376996 !important;
+  align: center !important;
+}
+
+.marginspace{
+  margin-top: 25px;
+}
+
+.image{
+  height: auto;
 }
 
 @keyframes App-logo-spin {

@@ -3,17 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Appbar from './AppBar';
-import Container from './Container.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App>
-    <Appbar/>
-    <Container maxWidth="sm">
-    al la la la 
-    </Container>
-    </App>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
