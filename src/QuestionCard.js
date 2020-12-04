@@ -31,9 +31,6 @@ export default function SimpleCard() {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Question One (something goes here to loop through the question numbers)
-        </Typography>
       </CardContent>
       <CardActions style={{justifyContent: 'center'}}>
         <RadioButton/>

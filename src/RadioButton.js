@@ -44,13 +44,18 @@ export default function ErrorRadios() {
     }
   };
 
+  const htmlQuestion = {question: "What does HTML stand for?",
+    correctAnswer: 'Hyper Text Markup Language',
+    possibleAnswer: ['Home Typing Markup Lingo', 'Hyper Text Markup Language', 'Hyper Typed Making Language']}
+
   return (
     <form onSubmit={handleSubmit}>
       <FormControl component="fieldset" error={error} className={classes.formControl}>
-        <FormLabel component="legend">Pop quiz: Material-UI is...</FormLabel>
+        <FormLabel component="legend">{htmlQuestion.question}</FormLabel>
         <RadioGroup aria-label="quiz" name="quiz" value={value} onChange={handleRadioChange}>
-          <FormControlLabel value="best" control={<Radio />} label="The best!" />
-          <FormControlLabel value="worst" control={<Radio />} label="The worst." />
+        {htmlQuestion.possibleAnswer.map(possible => {
+            return <FormControlLabel value={possible} control={<Radio />} label={possible}/>;})
+        }
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
         <Button type="submit" variant="outlined" color="primary" className={classes.button}>
@@ -60,3 +65,8 @@ export default function ErrorRadios() {
     </form>
   );
 }
+
+
+/* array w correct possible answers and map it, assign correct answer to form control label. 
+/* get value of what they chose and compare to correct value 
+radio button value - loop through array to change value color */
