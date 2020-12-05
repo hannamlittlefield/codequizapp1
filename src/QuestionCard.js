@@ -31,6 +31,7 @@ export default function SimpleCard() {
   return (
     <Card className={classes.root}>
       <CardContent>
+      <p>Question Count Up here (use a for loop to add on each time?)</p>
       </CardContent>
       <CardActions style={{justifyContent: 'center'}}>
         <RadioButton/>

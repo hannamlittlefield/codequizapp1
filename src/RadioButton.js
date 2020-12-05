@@ -32,14 +32,14 @@ export default function ErrorRadios() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (value === 'best') {
-      setHelperText('You got it!');
-      setError(false);
-    } else if (value === 'worst') {
-      setHelperText('Sorry, wrong answer!');
+    if (value === '') {
+      setHelperText('Please select an answer.');
       setError(true);
+    } else if (value === htmlQuestion.correctAnswer) {
+      setHelperText('Nice job!');
+      setError(false);
     } else {
-      setHelperText('Please select an option.');
+      setHelperText('Sorry, wrong answer.');
       setError(true);
     }
   };
@@ -64,9 +64,7 @@ export default function ErrorRadios() {
       </FormControl>
     </form>
   );
-}
-
-
+      }
 /* array w correct possible answers and map it, assign correct answer to form control label. 
 /* get value of what they chose and compare to correct value 
 radio button value - loop through array to change value color */
