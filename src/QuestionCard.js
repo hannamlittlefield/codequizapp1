@@ -9,7 +9,7 @@ import RadioButton from './RadioButton'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 275,
+    maxWidth: 400,
   },
   bullet: {
     display: 'inline-block',
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
+export default function QuestionCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 

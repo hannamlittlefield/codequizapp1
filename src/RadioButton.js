@@ -29,6 +29,15 @@ export default function ErrorRadios() {
     setError(false);
   };
 
+  /*const changeRightColor = () => {
+      for (let x=0; x < document.getElementsByName("quiz").length; x++){
+        if (document.getElementsByName("quiz")[x].value === value){
+          console.log(document.getElementsByName("quiz")[x])
+          document.getElementsByName("quiz")[x].style = "color: green !important"
+        }
+      }
+    }*/
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -44,6 +53,7 @@ export default function ErrorRadios() {
     }
   };
 
+
   const htmlQuestion = {question: "What does HTML stand for?",
     correctAnswer: 'Hyper Text Markup Language',
     possibleAnswer: ['Home Typing Markup Lingo', 'Hyper Text Markup Language', 'Hyper Typed Making Language']}
@@ -53,18 +63,19 @@ export default function ErrorRadios() {
       <FormControl component="fieldset" error={error} className={classes.formControl}>
         <FormLabel component="legend">{htmlQuestion.question}</FormLabel>
         <RadioGroup aria-label="quiz" name="quiz" value={value} onChange={handleRadioChange}>
-        {htmlQuestion.possibleAnswer.map(possible => {
-            return <FormControlLabel value={possible} control={<Radio />} label={possible}/>;})
+        {htmlQuestion.possibleAnswer.map((possible, i) => {
+            return <FormControlLabel key={i} value={possible} control={<Radio />} label={possible}/>;})
         }
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button type="submit" variant="outlined" color="primary" className={classes.button}>
+        <Button type="submit" className="cardbutton">
           Check Answer
         </Button>
       </FormControl>
     </form>
   );
       }
+
 /* array w correct possible answers and map it, assign correct answer to form control label. 
 /* get value of what they chose and compare to correct value 
 radio button value - loop through array to change value color */

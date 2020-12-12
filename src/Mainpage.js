@@ -4,9 +4,14 @@ import QuizCard from './QuizCard.js'
 import cssphoto from "./image/cssphoto.jpg"
 import htmlphoto from "./image/htmlphoto.jpg"
 import jsphoto from "./image/jsphoto.jpg"
+import Paragraph from './Paragraph'
+import AppBar from './AppBar'
 
 function Mainpage() {
     return (
+        <React.Fragment>
+        <AppBar/>
+        <Paragraph/>
         <Grid 
         style= {{gap: '1em'}}
         container
@@ -34,6 +39,7 @@ function Mainpage() {
        paragraph= "Random quiz questions"
        />*/}
         </Grid>
+        </React.Fragment>
     );
 }
 

@@ -1,5 +1,7 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core'
+import QuizPage from './QuizPage'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -14,6 +16,14 @@ const useStyles = makeStyles({
 
 function QuizCard ({title, paragraph, image}) {
   const classes = useStyles();
+  const handleOnClick = () => {
+    ReactDOM.render(
+      <QuizPage />, 
+    document.getElementById('root')
+    )
+  }
+
+
 
     return (
         <Card className={classes.root}
@@ -36,7 +46,7 @@ function QuizCard ({title, paragraph, image}) {
           </CardContent>
         </CardActionArea>
         <CardActions style={{justifyContent: 'center'}}>
-          <Button size="lg" className="cardbutton">
+          <Button size="large" className="cardbutton" onClick={handleOnClick}>
             Start Quiz!
           </Button>
         </CardActions>
@@ -46,3 +56,4 @@ function QuizCard ({title, paragraph, image}) {
 }
 
 export default QuizCard
+
