@@ -4,6 +4,7 @@
 
 .TitleText{
   font-family: 'Sansita Swashed', cursive !important;
+  text-align: center;
 }
 
 
@@ -26,8 +27,16 @@
   background-color: #1D3461 !important;
 }
 
+.Footer{
+  background-color: #1D3461 !important;
+  min-height: 50vh;
+  margin-top: 120px;
+}
+
 .container{
   background-color: #829CBC;
+  border-radius: 25px !important;
+
 }
 
 .cardbutton{
