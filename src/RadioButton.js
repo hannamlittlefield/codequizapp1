@@ -69,7 +69,7 @@ export default function ErrorRadios() {
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
         <Button type="submit" className="cardbutton">
-          Check Answer
+          Next
         </Button>
       </FormControl>
     </form>

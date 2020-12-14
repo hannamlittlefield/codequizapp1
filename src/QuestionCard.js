@@ -29,7 +29,8 @@ export default function QuestionCard() {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root}
+    justify="center">
       <CardContent>
       <p>Question Count Up here (use a for loop to add on each time?)</p>
       </CardContent>
