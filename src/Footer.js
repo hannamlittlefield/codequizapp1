@@ -1,6 +1,5 @@
 import { AppBar } from '@material-ui/core'
 import React from 'react'
-import Appbar from '@material-ui/core';
 
 
 export default function Footer(){

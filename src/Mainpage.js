@@ -6,6 +6,7 @@ import htmlphoto from "./image/htmlphoto.jpg"
 import jsphoto from "./image/jsphoto.jpg"
 import Paragraph from './Paragraph'
 import AppBar from './AppBar'
+import Footer from './Footer'
 
 function Mainpage() {
     return (
@@ -39,6 +40,7 @@ function Mainpage() {
        paragraph= "Random quiz questions"
        />*/}
         </Grid>
+        <Footer/>
         </React.Fragment>
     );
 }
