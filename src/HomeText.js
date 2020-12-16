@@ -17,7 +17,7 @@ export default function HomeText () {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg" className={classes.root}>
-        <Typography component="div" style={{ backgroundColor: '#829CBC', height: '40vh' }}>
+        <Typography component="div" style={{ backgroundColor: '#829CBC', height: '40vh', borderRadius: '25px'}}>
         <h1 className="TitleText">Quiz Machine</h1>
         <p>Test your knowledge!</p>
         </Typography>
