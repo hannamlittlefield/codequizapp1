@@ -1,13 +1,13 @@
 import './App.css';
-import AppBar from './AppBar.js'
-import Mainpage from './Mainpage.js'
+import NavBar from './NavBar.js'
+import Home from './Home.js'
 import QuestionCard from './QuestionCard'
 import Footer from './Footer'
 
 export default function App() {
   return (
     <div className="App">
-    <Mainpage id="main"/>
+    <Home id="main"/>
     <Footer/>
     </div>
   );

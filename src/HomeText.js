@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Paragraph () {
+export default function HomeText () {
   const classes = useStyles();
   return (
     <React.Fragment>

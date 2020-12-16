@@ -4,15 +4,15 @@ import QuizCard from './QuizCard.js'
 import cssphoto from "./image/cssphoto.jpg"
 import htmlphoto from "./image/htmlphoto.jpg"
 import jsphoto from "./image/jsphoto.jpg"
-import Paragraph from './Paragraph'
-import AppBar from './AppBar'
+import HomeText from './HomeText'
+import NavBar from './NavBar'
 import Footer from './Footer'
 
-function Mainpage() {
+export default function Home() {
     return (
         <React.Fragment>
-        <AppBar/>
-        <Paragraph/>
+        <NavBar/>
+        <HomeText/>
         <Grid 
         style= {{gap: '1em'}}
         container
@@ -44,5 +44,3 @@ function Mainpage() {
         </React.Fragment>
     );
 }
-
-export default Mainpage;

@@ -1,14 +1,14 @@
 import React from 'react'
 import {AppBar, Toolbar, IconButton, Typography} from '@material-ui/core'
-import Mainpage from './Mainpage';
+import Home from './Home';
 import ReactDOM from 'react-dom'
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 
 
-function Appbar() {
+export default function NavBar() {
   const handleOnClick = () => {
     ReactDOM.render(
-      <Mainpage />, 
+      <Home />, 
     document.getElementById('root')
     )
   }
@@ -24,4 +24,3 @@ function Appbar() {
 </AppBar>
     );
 }
-export default Appbar;

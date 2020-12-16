@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom'
-import AppBar from './AppBar'
+import NavBar from './NavBar'
 import QuestionCard from './QuestionCard';
 import {Container} from '@material-ui/core';
 import Footer from './Footer'
@@ -15,7 +15,7 @@ export default function QuizPage(){
 
     return(
     <React.Fragment>
-    <AppBar/>
+    <NavBar/>
     <Container maxWidth="sm" className="marginspace">
     <QuestionCard
     justify="center"/>
