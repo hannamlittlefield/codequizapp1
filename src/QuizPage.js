@@ -7,24 +7,35 @@ import Footer from './Footer'
 
 export default function QuizPage(){
     const [questions, setQuestions] = useState([])
+    const [total, setTotal] = useState(0)
+    const [correct, setCorrect] = useState(0)
+    const [incorrect, setIncorrect] = useState(0)
+    const [currentQuestion, setCurrentQuestion] = useState({}) 
 
     useEffect(() => {
         fetch('content/html.json')
             .then(res => {return res.json()})
-            .then(json => setQuestions(json)
-        );
+            .then(json => setQuestions(json))
     }, []);
 
-    console.log(questions);
+function randomQuestion() {
+   var questionNum = Math.floor(Math.random() * questions.length);
+    setCurrentQuestion(questions[questionNum])
+console.log(currentQuestion)
+setQuestions(questions.splice(questionNum, 1))
+}
 
     return(
     <React.Fragment>
     <NavBar/>
     <Container maxWidth="sm" className="marginspace">
-    <QuestionCard
-    justify="center"/>
+    {randomQuestion() && <QuestionCard
+    question = {currentQuestion}
+    count = {total}
+    justify="center"/>}
     </Container>
     <Footer/>
     </React.Fragment>
     )
 }
+

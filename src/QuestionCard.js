@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function QuestionCard() {
+export default function QuestionCard({count, question}) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -32,10 +32,11 @@ export default function QuestionCard() {
     <Card className={classes.root}
     justify="center">
       <CardContent>
-      <p>Question Count Up here (use a for loop to add on each time?)</p>
+      <p>{count}</p>
       </CardContent>
       <CardActions style={{justifyContent: 'center'}}>
-        <RadioButton/>
+        <RadioButton
+        htmlQuestion = {question}/>
       </CardActions>
     </Card>
   );

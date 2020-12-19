@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ErrorRadios() {
+export default function ErrorRadios({htmlQuestion}) {
   const classes = useStyles();
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);
@@ -52,11 +52,6 @@ export default function ErrorRadios() {
       setError(true);
     }
   };
-
-
-  const htmlQuestion = {question: "What does HTML stand for?",
-    correctAnswer: 'Hyper Text Markup Language',
-    possibleAnswer: ['Home Typing Markup Lingo', 'Hyper Text Markup Language', 'Hyper Typed Making Language']}
 
   return (
     <form onSubmit={handleSubmit}>
