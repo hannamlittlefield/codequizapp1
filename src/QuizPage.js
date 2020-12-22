@@ -10,32 +10,39 @@ export default function QuizPage(){
     const [total, setTotal] = useState(0)
     const [correct, setCorrect] = useState(0)
     const [incorrect, setIncorrect] = useState(0)
-    const [currentQuestion, setCurrentQuestion] = useState({}) 
+    /*
+        changed state here for current to be the position in the quetions array
+        we can update this state +1 when we manipulate the other pieces of state
+    */
+    const [currentQuestion, setCurrentQuestion] = useState(0) 
 
     useEffect(() => {
         fetch('content/html.json')
             .then(res => {return res.json()})
             .then(json => setQuestions(json))
-    }, []);
+    });
 
-function randomQuestion() {
-   var questionNum = Math.floor(Math.random() * questions.length);
-    setCurrentQuestion(questions[questionNum])
-console.log(currentQuestion)
-setQuestions(questions.splice(questionNum, 1))
-}
+    // can be removed if business logic is not required to randomly select a question
+    function randomQuestion() {
+        console.log(questions.length)
+        var questionNum = Math.floor(Math.random() * questions.length);
+        setCurrentQuestion(questions.indexOf(questionNum))
+        console.log(currentQuestion)
+        setQuestions(questions.splice(questionNum, 1))
+        console.log(questions)
+    }
 
     return(
-    <React.Fragment>
-    <NavBar/>
-    <Container maxWidth="sm" className="marginspace">
-    {randomQuestion() && <QuestionCard
-    question = {currentQuestion}
-    count = {total}
-    justify="center"/>}
-    </Container>
-    <Footer/>
-    </React.Fragment>
+        <React.Fragment>
+            <NavBar/>
+                <Container maxWidth="sm" className="marginspace">
+                    <QuestionCard
+                    question = {questions[currentQuestion]}
+                    count = {total}
+                    justify="center"/> 
+                </Container>
+            <Footer/>
+        </React.Fragment>
     )
 }
 
