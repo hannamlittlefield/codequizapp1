@@ -17,17 +17,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ErrorRadios({htmlQuestion}) {
+export default function ErrorRadios({htmlQuestion, handleSubmit, error, value, helperText, handleRadioChange}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState('');
+  /*const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);
-  const [helperText, setHelperText] = React.useState('Choose wisely');
+  const [helperText, setHelperText] = React.useState('Choose wisely');*/
 
-  const handleRadioChange = (event) => {
+ /* const handleRadioChange = (event) => {
     setValue(event.target.value);
     setHelperText(' ');
     setError(false);
-  };
+  }; */
 
   /*const changeRightColor = () => {
       for (let x=0; x < document.getElementsByName("quiz").length; x++){
@@ -38,7 +38,7 @@ export default function ErrorRadios({htmlQuestion}) {
       }
     }*/
 
-  const handleSubmit = (event) => {
+  /*const handleSubmit = (event) => {
     event.preventDefault();
 
     if (value === '') {
@@ -51,7 +51,7 @@ export default function ErrorRadios({htmlQuestion}) {
       setHelperText('Sorry, wrong answer.');
       setError(true);
     }
-  };
+  }; */
 
   return (
     <form onSubmit={handleSubmit}>

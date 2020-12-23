@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function QuestionCard({count, question}) {
+export default function QuestionCard({count, question, handleSubmit, error, value, helperText, handleRadioChange}) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -36,7 +36,12 @@ export default function QuestionCard({count, question}) {
       </CardContent>
       <CardActions style={{justifyContent: 'center'}}>
         <RadioButton
-        htmlQuestion = {question}/>
+        htmlQuestion = {question}
+        handleSubmit = {handleSubmit}
+        error={error}
+        value={value}
+        helperText={helperText}
+        handleRadioChange={handleRadioChange}/>
       </CardActions>
     </Card>
   );
