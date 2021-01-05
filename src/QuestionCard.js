@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import RadioButton from './RadioButton'
+import QuizResults from './QuizResults'
+import ReactDOM from 'react-dom'
 
 const useStyles = makeStyles({
   root: {
@@ -27,10 +29,20 @@ const useStyles = makeStyles({
 export default function QuestionCard({count, question, handleSubmit, error, value, helperText, handleRadioChange}) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
-
+  const handleOnClick = () => {
+    ReactDOM.render(
+      <QuizResults />, 
+    document.getElementById('root')
+    )
+  }
   return (
     <Card className={classes.root}
     justify="center">
+    <Button
+      justify="left"
+      className="cardbutton"
+      onClick={handleOnClick}
+      >Quit</Button>
       <CardContent>
       <p>{count}</p>
       </CardContent>
