@@ -4,10 +4,10 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import RadioButton from './RadioButton'
 import QuizResults from './QuizResults'
-import ReactDOM from 'react-dom'
+import Home from './Home'
+import {useHistory} from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -29,12 +29,12 @@ const useStyles = makeStyles({
 export default function QuestionCard({count, question, handleSubmit, error, value, helperText, handleRadioChange}) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
+  
+  let history = useHistory();
   const handleOnClick = () => {
-    ReactDOM.render(
-      <QuizResults />, 
-    document.getElementById('root')
-    )
+    history.push("/");
   }
+
   return (
     <Card className={classes.root}
     justify="center">
