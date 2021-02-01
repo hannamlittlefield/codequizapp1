@@ -70,3 +70,11 @@ p {
     transform: rotate(360deg);
   }
 }
+
+nav ul li {
+  display: inline;
+  padding: 5px;
+  list-style-type: none;
+  text-transform: uppercase;
+  background: #1D3461;
+}
