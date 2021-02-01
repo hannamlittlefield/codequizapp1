@@ -5,13 +5,11 @@ import cssphoto from "./image/cssphoto.jpg"
 import htmlphoto from "./image/htmlphoto.jpg"
 import jsphoto from "./image/jsphoto.jpg"
 import HomeText from './HomeText'
-import NavBar from './NavBar'
 import Footer from './Footer'
 
 export default function Home() {
     return (
         <React.Fragment>
-        <NavBar/>
         <HomeText/>
         <Grid 
         style= {{gap: '1em'}}
