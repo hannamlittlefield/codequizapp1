@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core'
 import QuizPage from './QuizPage'
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -16,11 +17,18 @@ const useStyles = makeStyles({
 
 function QuizCard ({title, paragraph, image}) {
   const classes = useStyles();
-  const handleOnClick = () => {
+  
+  
+  /*const handleOnClick = () => {
     ReactDOM.render(
       <QuizPage />, 
     document.getElementById('root')
     )
+  }*/
+
+  let history = useHistory();
+  const handleOnClick = () => {
+    history.push("/QuizPage");
   }
 
 
