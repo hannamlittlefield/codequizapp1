@@ -5,17 +5,12 @@ import Footer from './Footer'
 import QuizPage from './QuizPage'
 import { HashRouter, Switch, Route, NavLink } from 'react-router-dom'
 
-
-/*add nav bar here */
-/*add nav link and route to all components into nav bar -  */
-
-
 export default function App() {
   return (
     <div className="App">
     <HashRouter>
     <div>
-      <nav>
+      <nav className="navbar">
         <ul>
           <li>
             <NavLink exact to="/">
