@@ -8,5 +8,30 @@
         "question": "How many Heading are there in HTML?",
         "correctAnswer": 6,
         "possibleAnswer": [1,6,8,9]
+    },
+    {
+        "question": "Which HTML element is used to make text bold?",
+        "correctAnswer": "<b>",
+        "possibleAnswer": ["<p>", "<i>", "<b>", "<bold>"]
+    },
+    {
+        "question": "Which HTML5 element is used to make text bold?",
+        "correctAnswer": "<strong>",
+        "possibleAnswer": ["<span>", "<strike>", "<strong>", "<bold>"]
+    },
+    {
+        "question": "Which HTML element is used to make an unordered list?",
+        "correctAnswer": "<ul>",
+        "possibleAnswer": ["<li>", "<ul>", "<ol>", "<td>"]
+    },
+    {
+        "question": "Which is the correct way to make a hyperlink",
+        "correctAnswer": "<a href=\"www.google.com\">google.com</a>",
+        "possibleAnswer": ["<a href=\"www.google.com\">google.com</a>", "<link>google.com</link>", "<a>google.com</a>", "<hyperlink>google.com</hyperlink>"]
+    },
+    {
+        "question": "Which HTML element is used to make a linke break?",
+        "correctAnswer": "<br>",
+        "possibleAnswer": ["</br>", "<break>", "<br>", "</lb>"]
     }
 ]
