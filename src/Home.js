@@ -38,7 +38,6 @@ export default function Home() {
        paragraph= "Random quiz questions"
        />*/}
         </Grid>
-        <Footer/>
         </React.Fragment>
     );
 }
