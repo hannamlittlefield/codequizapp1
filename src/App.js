@@ -2,8 +2,10 @@ import './App.css';
 import NavBar from './NavBar.js'
 import Home from './Home.js'
 import Footer from './Footer'
-import QuizPage from './QuizPage'
+import htmlQuiz from './HTMLQuiz'
 import { HashRouter, Switch, Route, NavLink } from 'react-router-dom'
+import cssQuiz from './CSSQuiz';
+import jsQuiz from './JSQuiz';
 
 export default function App() {
   return (
@@ -18,21 +20,22 @@ export default function App() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/QuizPage">HTML Quiz</NavLink>
+            <NavLink to="/HTMLQuiz">HTML Quiz</NavLink>
           </li>
           <li>
-            <NavLink to="/QuizPage">CSS Quiz</NavLink>
+            <NavLink to="/CSSQuiz">CSS Quiz</NavLink>
           </li>
           <li>
-            <NavLink to="/QuizPage">Javascript Quiz</NavLink>
+            <NavLink to="/JavascriptQuiz">Javascript Quiz</NavLink>
           </li>
         </ul>
       </nav>
       <div id="content">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/QuizPage" component={QuizPage} />
-          <Route exact path="/QuizPage" component={QuizPage} />
+          <Route exact path="/HTMLQuiz" component={htmlQuiz} />
+          <Route exact path="/CSSQuiz" component={cssQuiz} />
+          <Route exact path="/JavascriptQuiz" component={jsQuiz} />
         </Switch>
       </div>
     </div>
